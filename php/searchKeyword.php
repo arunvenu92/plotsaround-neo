@@ -84,7 +84,7 @@
 	 else
 	 {
 		 echo 'Inside else';
-		 $resultRows[]=array('NR'=>"No rows found");
+		 $resultRows[]=array('NR'=>"No rows found for the search Query.");
 		 $response['resultRows']=$resultRows;
 		 $json_file=json_encode($resultRows);
          fwrite($file,$json_file);
