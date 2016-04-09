@@ -107,6 +107,11 @@
 		  {
 			  padding-top: 12px;
 		  }
+		  #no-search
+		  {
+			  padding-left:500px;
+		  }
+		  
 		  
 		</style>
 		<script type="text/javascript">
@@ -174,9 +179,9 @@
 			  <li><a href="index.php#why">Why Plotsaround?</a></li>
 			  <li><div id="whats-app"><img src="images/wa-pa.png"><label>89515-23243</label></div></li>
 			</ul>
-		     <div id="fb-root"><div id="fb-like-share-button" class="fb-like" data-href="https://www.facebook.com/plotsaroundmysore" data-layout="standard" data-action="like" data-show-faces="true" data-share="true"></div></div>
+		     <div id="fb-like-share-button" class="fb-like" data-href="https://www.facebook.com/plotsaroundmysore/?ref=aymt_homepage_panel" data-layout="standard" data-action="like" data-show-faces="true" data-share="true"></div>
 		</div>
-    </div>
+	</div>
  	</nav>
 	
 	<img id="image-format" class="image-responsive" src="./images/header_image.jpg">
@@ -232,14 +237,17 @@
 		   $resultJSON = json_decode(file_get_contents('json/output.json'),true);
 		   if($resultJSON != null)
 		   { 
-			   $rowCount = $_SESSION['rowcount'];
+			$rowCount = $_SESSION['rowcount'];
 			foreach($resultJSON as $developerData)
 		    {		
 				while (list($key, $value) = each($developerData)) 
 				 {
 				  if($key == "NR")
 				  {
-					  echo '<script> alert('.$value.')</script>';
+					  echo '<div id="no-search">';
+					  echo '<img src="images/no-search-image.png">';
+					  echo '<h3>No value is found for the search </h3>';
+					  echo '</div>' ;
 				  }
 				 }
 			}
