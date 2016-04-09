@@ -9,148 +9,8 @@
 		<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 		<link href='https://fonts.googleapis.com/css?family=Bitter' rel='stylesheet' type='text/css'>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>	
-		
-		<style>
-		#tag 
-		{
-		   width: 100%;
-		   position: absolute;
-		   left: 0px;
-		   top: 0px;
-		   z-index: 1000;
-		   color: #000000;
-		   font-weight: bold;
-		   padding-top:380px;
-		}
-		#image-format
-		{
-			width:100%;
-		}
-		#tag-line
-		{
-			font-family: 'Bitter', serif;
-			font-size:
-		}
-		#logo-format
-		{
-			padding-bottom:20px;
-		}
-	    #top-bar-format
-		{
-		   	padding-bottom:40px;
-		}
-		#panel-format
-		{
-			width:900px;
-		}
-		   #image, #developerdetails, #personalDetails {display: inline-block; *display: inline; zoom: 1; vertical-align: top; font-size: 12px;}
-		   #image
-		   {
-			  border-radius: 0px;
-			  border: 2px solid #000000; 
-			  width:200px;
-			  height:200px;		     
-		   }
-		   #developerdetails
-		   {
-			  width:500px;
-			  padding-left:50px;
-			  border-radius: 0px;
-			  font-size:20px;
-		   }
-		   #personalDetails
-		   {
-			  padding-left:50px;
-			  padding-top:140px;
-			  border-radius: 0px;
-		   }
-		   #about-us
-		   {
-			   margin-top:200px;
-		   }
-		   #contact-details
-		   {
-			   margin-top:250px;
-		   }
-		   
-		   * {margin: 0; padding: 0;}	   
-		  .jumbotron 
-		  { 
-			background: #e0fcd4; color: #000; border-radius: 0px; 
-		  } 
-		  .jumbotron-sm 
-		  { 
-			padding-top: 24px; padding-bottom: 24px; 
-		  } 
-		  .jumbotron small 
-		  { 
-			color: #000; 
-		  } 
-		  .h1 small 
-		  { 
-			font-size: 24px; 
-		  }
-		  #example.example-price
-		  {
-			  padding-left:50px;
-		  }
-		  
-		  #fb-like-share-button
-		  {
-			  padding-left:130px;
-		  }
-		  #example
-		  {
-			  padding-left:160px;  
-		  }
-		  #fb-like-share-button,#whats-app
-		  {
-			  padding-top: 12px;
-		  }
-		  #no-search
-		  {
-			  padding-left:500px;
-		  }
-		  
-		  
-		</style>
-		<script type="text/javascript">
-		$( document ).ready(function() {
-			$('#search_price').val("0");
-			$('#search_locality').val("0");
-		});
-		 $(function(){
-
-			$("#dropdown-menu1").on('click', 'li a', function(){
-			  $("#price_button:first-child").text($(this).text());
-			  $("#price_button:first-child").val($(this).text());
-		   });
-            
-			$("#dropdown-menu2").on('click', 'li a', function(){
-			  $("#locality_button:first-child").text($(this).text());
-			  $("#locality_button:first-child").val($(this).text());
-		   });
-		});
-	   function checkValue()
-	   {
-		   var searchForm = document.forms["searchForm"];
-		   
-		   var word = searchForm.elements["searchDb"].value;
-		   var locality =searchForm.elements["search_locality"].value;
-		   var price = searchForm.elements["search_price"].value;
-		   
-		   if(word=="" && locality == 0 && price == 0)
-		   {
-			 alert("Please give anyone of the search criteria"); 
-             return false; 			 
-		   }
-		   else
-		   {
-			   return true;
-		   }
-		
-		}
-		</script>
+		<link href="css/index.css" rel="stylesheet" type="text/css">
+		<script src="js/index.js"></script>
 	</head>
 <body>
 <div id="fb-root"></div>
@@ -166,7 +26,7 @@
 </script>
 
 <div class="container-fluid">	
-    <nav class="navbar navbar-default">
+    <nav id="nav-format" class="navbar navbar-default">
     <div  id="logo-format" class="navbar-header">
       <a class="navbar-brand" href="index.php"><img src="./images/logo.png"></a>
     </div>
@@ -179,7 +39,7 @@
 			  <li><a href="index.php#why">Why Plotsaround?</a></li>
 			  <li><div id="whats-app"><img src="images/wa-pa.png"><label>89515-23243</label></div></li>
 			</ul>
-		     <div id="fb-like-share-button" class="fb-like" data-href="https://www.facebook.com/plotsaroundmysore/?ref=aymt_homepage_panel" data-layout="standard" data-action="like" data-show-faces="true" data-share="true"></div>
+			 <div id="fb-like-share-button" class="fb-like" data-href="https://www.facebook.com/plotsaroundmysore/?ref=aymt_homepage_panel" data-layout="standard" data-action="like" data-show-faces="false" data-share="true"></div>
 		</div>
 	</div>
  	</nav>
@@ -331,18 +191,7 @@
 			</div>
 		</div>
 	</div>
-
 	<div class="container">
-			<div class="row">
-			  <div class="col-xs-6 col-md-3">
-				<a href="#" class="thumbnail">
-				  <img src="..." alt="...">
-				</a>
-				<a href="#" class="thumbnail">
-				  <img src="..." alt="...">
-				</a>
-			  </div>
-			</div>
 	</div>
 </div>
 
