@@ -14,6 +14,7 @@ $( document ).ready(function() {
 			  $("#locality_button:first-child").val($(this).text());
 		   });
 		});
+		
 	   function checkValue()
 	   {
 		   var searchForm = document.forms["searchForm"];
